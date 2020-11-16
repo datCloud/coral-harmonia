@@ -62,4 +62,27 @@ $(document).ready(function(){
       $(this).attr('href', 'https://api' + $(this).attr('href').split('https://web')[1]);
     });
   }
+  // DROPDOWN BUTTON FOR SCORES GENRE FILTER
+  $('.btn-dropdown').on('click', function(){
+    $(this).toggleClass('active-dropdown');
+    $(this).children('.dropdown-content').slideToggle();
+  });
+  $('.btn-dropdown .dropdown-content *').on('click', function(){
+    if($(this).attr('data-genre') == ''){
+      $(this).closest('.btn-dropdown').find('> span').text('CATEGORIAS & GÊNEROS');
+      $('.table-score tr').each(function(){
+        $(this).show();
+      });
+    }
+    else{
+      $(this).closest('.btn-dropdown').find('> span').text($(this).text());
+      let genreFilter = $(this).attr('data-genre');
+      console.log(genreFilter);
+      $('.table-score tr').each(function(){
+        console.log($(this).attr('data-genre'));
+        if($(this).attr('data-genre') != genreFilter) $(this).hide();
+        else $(this).show();
+      });
+    }
+  });
 });

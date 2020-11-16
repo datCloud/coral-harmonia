@@ -63,8 +63,8 @@ h2.large-title{font-size:110px;letter-spacing:-5px;line-height:101px;}
 .btn-alt:hover{background:white;color:#232323;}
 .btn-square{min-width:170px;height:43px;color:#ffda00;background-color:#212529;display:inline-flex;justify-content:center;align-items:center;margin:5px;font-size:20px;transition:0.3s;cursor:pointer;}
 .btn-square:not(.btn-dropdown):hover,.btn-active{background:#ffda00;color: #212529 !important;}
-.btn-dropdown{padding:0 20px;background:white;outline:1px solid #212529;outline-offset:-1px;color:#929394;}
-.btn-dropdown:hover{color:#212529;}
+.btn-dropdown{padding:0 20px;background:white;outline:1px solid #212529;outline-offset:-1px;color:#929394;position: relative;min-width: 246px;}
+.btn-dropdown:hover, .btn-dropdown.active-dropdown{color:#212529;}
 .btn-text-white{color:white;}
 
 /* ABOUT US */
@@ -133,6 +133,9 @@ h2.large-title{font-size:110px;letter-spacing:-5px;line-height:101px;}
 .table-score .btn-table a:hover{background:#212529;color:white;}
 .table-score .btn-table a:hover img{filter:invert(1);}
 .table-score :not(.btn-table) a:hover{background:#212529;color: white;}
+.btn-dropdown .dropdown-content {display: flex;flex-flow: column;width: 100%;height: auto;max-height: 300px;overflow-y: scroll;position: absolute;top: 100%;z-index: 10;box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);outline-offset: -1px;background: white;}
+.btn-dropdown .dropdown-content * {padding: 0.5rem 1rem;transition: 0.3s;}
+.btn-dropdown .dropdown-content *:hover {background: #ffdb00;}
 
 /* CURIOSITIES */
 .curiosities .curiosities--icon{background:#ffda00;width:77px;height:77px;display:inline-flex;justify-content:center;align-items:center;margin-bottom:1rem;}
