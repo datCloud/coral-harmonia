@@ -77,9 +77,7 @@ $(document).ready(function(){
     else{
       $(this).closest('.btn-dropdown').find('> span').text($(this).text());
       let genreFilter = $(this).attr('data-genre');
-      console.log(genreFilter);
       $('.table-score tr').each(function(){
-        console.log($(this).attr('data-genre'));
         if($(this).attr('data-genre') != genreFilter) $(this).hide();
         else $(this).show();
       });
