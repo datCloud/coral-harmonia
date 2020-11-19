@@ -37,17 +37,7 @@ $(document).ready(function(){
   });
   // BACKGROUND HEIGHT BY TITLE HEIGHT WORKAROUND
   let titleHeights = [];
-  if($(window).width() > 768){
-    $('.specs h2').each(function(){
-      titleHeights.push($(this).outerHeight(true));
-    });
-    let maxTitleHeight = Math.max.apply(null, titleHeights);
-    $('.bg-specs').attr('style', `--data-bg-height: ${maxTitleHeight}px`);
-    $('.specs h2').each(function(){
-      $(this).outerHeight(maxTitleHeight);
-    });
-  }
-  else{
+  if($(window).width() > 425 && $(window).width() <= 768){
     let firstLine = [];
     let lastLine = [];
     $('.specs .specs--item:nth-child(-n+3) h2').each(function(){
@@ -66,6 +56,16 @@ $(document).ready(function(){
       $(this).outerHeight(maxTitleHeight[1]);
     });
     $('.bg-specs').attr('style', `--data-bg-height-first-line: ${maxTitleHeight[0]}px;--data-bg-height-last-line: ${maxTitleHeight[1]}px;--data-bg-top-last-line: ${$('.specs .specs--item:nth-child(1)').outerHeight() + parseInt($('.specs .specs--item:nth-child(4)').css('margin-top')) + 112}px`);
+  }
+  else if($(window).width() > 768){
+    $('.specs h2').each(function(){
+      titleHeights.push($(this).outerHeight(true));
+    });
+    let maxTitleHeight = Math.max.apply(null, titleHeights);
+    $('.bg-specs').attr('style', `--data-bg-height: ${maxTitleHeight}px`);
+    $('.specs h2').each(function(){
+      $(this).outerHeight(maxTitleHeight);
+    });
   }
   // LIGHTBOX
   $('.lightbox').fancybox({
