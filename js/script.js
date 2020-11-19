@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  // MOBILE MENU TOGGLE
+  $('.nav-top .nav-mobile, .nav-top nav *').on('click', function(){
+    $('.nav-top .nav-container').toggleClass('active-mobile-menu');
+  });
   // SHOW SCHEDULE POPUP
 	$('.table td .selected').mouseenter(function(){
 		$(this).find('.popup-event').fadeIn();
@@ -49,12 +53,10 @@ $(document).ready(function(){
     $('.specs .specs--item:nth-child(-n+3) h2').each(function(){
       firstLine.push($(this).outerHeight(true));
     });
-    console.log(firstLine);
     titleHeights.push(firstLine);
     $('.specs .specs--item:nth-child(n+4) h2').each(function(){
       lastLine.push($(this).outerHeight(true));
     });
-    console.log(lastLine);
     titleHeights.push(lastLine);
     let maxTitleHeight = [Math.max.apply(null, titleHeights[0]), Math.max.apply(null, titleHeights[1])];
     $('.specs .specs--item:nth-child(-n+3) h2').each(function(){

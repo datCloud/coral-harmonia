@@ -174,3 +174,9 @@ display:block;min-height:100%;min-width:100%;max-width:none;height:auto;width:au
 	.cd-hero-slider .cd-full-width,.cd-hero-slider .cd-half-width{max-width: 93%;}
 	.cd-hero .slider--btn{font-size:19px;padding: 6px 19px;}
 }
+@media only screen and (max-width: 425px){
+	.cd-hero-slider{height: 650px;}
+	.cd-hero-slider li{padding-top: 0;background-position: center !important;background-size: cover !important;}
+	.cd-hero .slider-title{font-size: 4.3rem;letter-spacing: 0;line-height: 60px;margin-bottom: 20px;}
+	.cd-hero .slider--btn{font-size: 14px;}
+}
