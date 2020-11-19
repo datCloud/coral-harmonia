@@ -28,7 +28,8 @@ header .header--social a:not(:last-child){margin-right:14px;}
 .nav-top nav a{color:white;font-size:29.42px;letter-spacing:2px;margin:0 12px;transition: 0.3s;}
 .nav-top nav{margin-top:35px;margin:35px 10px 0 30px;}
 .nav-top nav a:hover{color: #ffdb00;}
-.nav-top .nav-mobile {display: none;}
+.nav-top .nav-mobile{display: none;}
+.nav-top nav > i{display: none;}
 
 /* SLIDER */
 .cd-hero .slider-title{color:#ffdb00;font-size:11rem;line-height:140px;letter-spacing:12px;margin-bottom:25px;}
@@ -275,4 +276,5 @@ footer h5{font-size:17.85px;margin:1rem 0;}
 	.table-events td .popup-event{padding: 1rem;}
 	.table-events td .popup-event h2{font-size: 1.7rem;}
 	.table-events td .popup-event p{font-size: 16px;}
+	.table-score h4{font-size: 18px;}
 }
