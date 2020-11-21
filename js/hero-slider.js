@@ -171,13 +171,21 @@ jQuery(document).ready(function($){
 		customNavigation($(this).attr('data-direction'));
 	});
 
+	$('.cd-hero').on('click', function(){
+		console.log('aaa');
+	});
+
 	$('.cd-hero').on('swipeleft', function(){
 		customNavigation('prev');
+		$('.contact-bar').css('background', 'red');
 	});
 
 	$('.cd-hero').on('swiperight', function(){
 		customNavigation('next');
+		$('.contact-bar').css('background', 'green');
 	});
+
+	$('.cd-hero, .cd-hero-slider, .cd-hero-slider .selected, .cd-full-width, .slider-title').on('longtap',function(e,data){console.log('bbbb')});
 
 	// END HERO ARROWS
 	
