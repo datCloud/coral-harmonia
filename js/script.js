@@ -69,7 +69,7 @@ $(document).ready(function(){
   }
   // LIGHTBOX
   $('.lightbox').fancybox({
-      toolbar: false,
+      buttons: ["close"],
       btnTpl: {
           arrowLeft:
             '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
